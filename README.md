@@ -3,8 +3,13 @@
 Made for shadowlands, won't work in classic. If anyone wants to make it work with classic feel free to open a pull request.
 
  ## Q/A:
+
+**How to use?**
+
+Type /m then find and drag the macro called "Drink Macro" onto your action bars. That's all, this macro will be kept up to date and work on all your characters.
  
  **What does it do?**
+ 
 This addon will make a macro under "General Macros" called "Drink Macro". This macro will just be two lines:
 
 	#showtooltip
