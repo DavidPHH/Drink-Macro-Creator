@@ -17,9 +17,12 @@ local drinks = {
     65516, -- Conjured Mana Cupcake
     65515, -- Conjured Mana Brownie
     65500, -- Conjured Mana Cookie
+	190880, -- Catalyzed Apple Pie
+	190881, -- Circle of Subsistence
     173859, -- Ethereal Pomegranate
     174283, -- Stygian Stew
     174284, -- Empyrean Fruit Salad
+	190936, -- Restorative Flow
     177040, -- Ambroria Dew
     178545, -- Bone Apple Tea
     178217, -- Azurebloom Tea
