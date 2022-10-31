@@ -41,7 +41,7 @@ local drinks = {
     194680, -- Jerky Surprise ................ (66.7k MP, 50k HP)
     201047, -- Magically Repurposed Essentials (66.7k MP, 50k HP)
     194682, -- Mother's Gift ................. (66.7k MP, 50k HP)
-    200871, -- Steamed Scarab Steak .......... (67.5k MP, 50k HP)
+    200871, -- Steamed Scarab Steak .......... (66.7k MP, 50k HP)
     195465, -- Stormwing Egg Breakfast ....... (66.7k MP, 50k HP)
     194681, -- Sugarwing Cupcake ............. (66.7k MP, 50k HP)
     197762, -- Sweet and Sour Clam Chowder ... (66.7k MP, 50k HP)
