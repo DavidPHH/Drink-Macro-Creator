@@ -25,6 +25,10 @@ I often found myself replacing the drink in my action bar with mage food then re
 This addon has no settings or anything to configure, that might be a drawback or a plus depending on your needs. I made itafter trying all the other similar addons, some of which kept bugging out on me, some who didn't work at all, and some which didn't have the newest shadowlands drinks.
 In the end it was easier to make my own bugfree one that suits my needs and I'm sharing here in case anyone else is in the same boat as me.
 
+**Okay, you said "no config required" but I'm a control freak and really want to configure *something*.**
+
+If you want to get your hands in the mix, you'll find your adjustments in the table called **drinks** in **DrinkMacroCreator.lua**. There are some pointers in the comment at the top, but the format itself is simple. itemIDs can be found on Wowhead.
+
 **You keep mentioning drinks, does it work with food too?**
 
 Mostly. The high level food has both mp and health and are priod in the addon, so if you're max level and not a mana user and also want some macro that auto changes mage food / normal food this will work for you. I'm willing to add low level / other hp-only foods as well if someone makes a pull request with a food list akin to the drink list in the main lua file.
