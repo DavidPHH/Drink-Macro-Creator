@@ -11,6 +11,7 @@
     5. Mana only regen items with a Well Fed buff
     6. Alphabetical sort
 * Added CHANGELOG.md
+* Added a bit fo README.md
 
 ## Version 1.1.1 (2022/10/30)
 * Added Dragonflight consumables (from Wowhead as of 2022/10/30) ([Search query](https://www.wowhead.com/items/consumables/food-and-drinks?filter=166;10;0))
