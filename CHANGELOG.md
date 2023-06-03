@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 1.2.1 (2023/06/02)
+* Updated TOC for 10.1
+
 ## Version 1.2.0 (2022/10/31)
 * Updated the drinks table to more clearly show what each entry corresponds to, as well as updating the values to match their current MP/HP gains (as of 10.0)
 * Removed 115351, "Rylak Claws" (5k HP) -- No MP gain
