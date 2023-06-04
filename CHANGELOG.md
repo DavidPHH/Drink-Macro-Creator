@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.3.0 (2023/06/04)
+* Recreated drinks table to have updated values. There were quite a few since last update.
+* Created a scraper to take a wowhead URL and spit out a usable line for the drinks table. See `scraper/readme.md` for more details
+* Split out mage food into its own table, since they seldom change (and give 100%/100%). These items will be prepended onto the drinks table automatically.
+
 ## Version 1.2.1 (2023/06/02)
 * Updated TOC for 10.1
 
