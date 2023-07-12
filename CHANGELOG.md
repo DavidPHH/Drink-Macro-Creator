@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 1.3.1 (2023/07/12)
+* Updated TOC for 10.1.5
+
 ## Version 1.3.0 (2023/06/04)
 * Recreated drinks table to have updated values. There were quite a few since last update.
 * Created a scraper build the table for drinks automatically. See `scraper/readme.md` for more details
