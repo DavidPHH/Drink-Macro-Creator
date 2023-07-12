@@ -1,6 +1,6 @@
 
 ## Simple light weight addon, no config required. Just does what it says. 
-Made for shadowlands, won't work in classic. If anyone wants to make it work with classic feel free to open a pull request.
+Made for retail, won't work in classic. If anyone wants to make it work with classic feel free to open a pull request.
 
  ## Q/A:
 
@@ -22,7 +22,7 @@ I often found myself replacing the drink in my action bar with mage food then re
 
 **What's the difference between this and similar addons?**
 
-This addon has no settings or anything to configure, that might be a drawback or a plus depending on your needs. I made itafter trying all the other similar addons, some of which kept bugging out on me, some who didn't work at all, and some which didn't have the newest shadowlands drinks.
+This addon has no settings or anything to configure, that might be a drawback or a plus depending on your needs. I made it after trying all the other similar addons, some of which kept bugging out on me, some who didn't work at all, and some which didn't have the newest drinks.
 In the end it was easier to make my own bugfree one that suits my needs and I'm sharing here in case anyone else is in the same boat as me.
 
 **Okay, you said "no config required" but I'm a control freak and really want to configure *something*.**
