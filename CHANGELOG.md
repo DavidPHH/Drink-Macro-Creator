@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.3.2 (2023/11/28)
+* Updated TOC for 10.2.0
+* Added drinks for 10.1.5-10.2.0 to scraper
+* Updated drinks table
+
 ## Version 1.3.1 (2023/07/12)
 * Updated TOC for 10.1.5
 
