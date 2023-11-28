@@ -16,6 +16,12 @@ REPORT_FAILURES = True                # If we can't process an item, print to st
 RATE_LIMIT = 0                        # Rate limit in seconds
 BASE_URL = "https://www.wowhead.com/" # Base URL for item links
 SEARCH_ITEMS = [                      # List of itemids to search
+    # Dragonflight (10.2.0)
+    207054, 209019,
+    # Dragonflight (10.1.7)
+    ## Nothing added this patch
+    # Dragonflight (10.1.5)
+    207956, 208448, 206474,
     # Dragonflight (10.0.0 to 10.1.0)
     205684, 194691, 204072, 197794, 197792, 201422, 197769, 197795, 204845,
     201420, 197771, 204342, 197766, 194683, 194690, 197784, 198356, 197767,
