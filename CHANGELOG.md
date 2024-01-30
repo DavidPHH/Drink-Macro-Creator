@@ -1,5 +1,16 @@
 # Changelog
 
+## Version 1.4 (2024/01/29)
+* Updated TOC for 10.2.5
+* Script will now create two macros: one for food and one for drink.
+  * Macro names have been changed to `dmcDrink` and `dmcFood` to make them easier to spot next to each other in the macro window. Your existing macros and keybinds will not be removed; you'll need to place the new ones on the hotkey bar.
+* Scraper
+  * Split item ID table into its own file and cleaned it up a bit.
+  * Created new food scraper based on the drink scraper. Both use the new list.
+    * Will probably eventually merge the two scrapers into one that just puts out both lists. This works for now though.
+  * Item list consists of three parts now: A base item list (which is intended to be add-only), an ignore list (for bugged, miscategorized, or otherwise unwanted items), and the search items list, generated from the sets of the first two lists.
+* Updated tables with fresh-scraped datas. Yum.
+
 ## Version 1.3.2 (2023/11/28)
 * Updated TOC for 10.2.0
 * Added drinks for 10.1.5-10.2.0 to scraper
