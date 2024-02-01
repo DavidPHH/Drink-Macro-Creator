@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup as bs
 
 ### Begin configuration ###
 DISCARD_BUFF_FOOD = True              # Discard buff food
-DISCARD_NO_MANA = True                # Discard items with no mana regen
+DISCARD_NO_HEALTH = True              # Discard items with no health regen
 SHORTEN = True                        # Shorten values: 1000 -> 1k
 SHOW_PROGRESS = True                  # Show progress indicator
 REPORT_FAILURES = True                # If we can't process an item, print to stderr at end of run
@@ -35,6 +35,7 @@ class Item():
         self.duration = duration
         self.tooltip = tooltip
         self.mps = self.mana / self.duration if self.mana > 0 and self.duration > 0 else 0
+        self.hps = self.health / self.duration if self.health > 0 and self.duration > 0 else 0
         
     def __str__(self):
         # Special handling for mage food
@@ -42,13 +43,13 @@ class Item():
             return f"{str(self.id) + ',':<7} -- {self.name} {'.' * (SEPARATOR_LEN - len(self.name))} (100% MP/HP) [Mage Food]"
         # Health and Mana
         if self.mana is not None and self.health is not None:
-            return f"{str(self.id) + ',':<7} -- {self.name} {'.' * (SEPARATOR_LEN - len(self.name))} ({shorten(self.mana) if SHORTEN else self.mana} MP, {shorten(self.health if SHORTEN else self.health)} HP) [{self.mps}]"
+            return f"{str(self.id) + ',':<7} -- {self.name} {'.' * (SEPARATOR_LEN - len(self.name))} ({shorten(self.mana) if SHORTEN else self.mana} MP, {shorten(self.health if SHORTEN else self.health)} HP) [{self.hps}]"
         # Health only
         if self.health is not None:
-            return f"{str(self.id) + ',':<7} -- {self.name} {'.' * (SEPARATOR_LEN - len(self.name))} ({shorten(self.health) if SHORTEN else self.health} HP) [{self.mps}]"
+            return f"{str(self.id) + ',':<7} -- {self.name} {'.' * (SEPARATOR_LEN - len(self.name))} ({shorten(self.health) if SHORTEN else self.health} HP) [{self.hps}]"
         # Mana only
         if self.mana is not None:
-            return f"{str(self.id) + ',':<7} -- {self.name} {'.' * (SEPARATOR_LEN - len(self.name))} ({shorten(self.mana) if SHORTEN else self.mana} MP) [{self.mps}]"
+            return f"{str(self.id) + ',':<7} -- {self.name} {'.' * (SEPARATOR_LEN - len(self.name))} ({shorten(self.mana) if SHORTEN else self.mana} MP) [{self.hps}]"
 
 
     __repr__ = __str__
@@ -103,7 +104,7 @@ for index, itemid in enumerate(SEARCH_ITEMS):
     health = health_match.group(0) if health_match is not None else None
     mana = mana_match.group(0) if mana_match is not None else None
     duration = 0 # Intial value, see below
-    # Most items appear to have a pattern of (mana-per-tick / tick-interval * duration)
+    # Most items appear to have a pattern of (resource-per-tick / tick-interval * duration)
     # I've only seen a few items that follow (a / b or a * b), not sure yet the best way to handle these
     if health and re.match(pattern_health, health) is not None:
         a, b, c = map(int, re.findall(r"\d+", health))
@@ -141,7 +142,7 @@ for index, itemid in enumerate(SEARCH_ITEMS):
             print("Unrecognized mana format")
             exit(1)
 
-    if DISCARD_NO_MANA and mana is None:
+    if DISCARD_NO_HEALTH and health is None:
         time.sleep(RATE_LIMIT)
     elif DISCARD_BUFF_FOOD and 'well fed' in tooltip.lower():
         time.sleep(RATE_LIMIT)
@@ -153,7 +154,7 @@ for index, itemid in enumerate(SEARCH_ITEMS):
         time.sleep(RATE_LIMIT)
 
 # Prepare for presentation
-presort.sort(key=lambda x: (x.mps, x.mana, x.health, x.name), reverse=True)
+presort.sort(key=lambda x: (x.hps, x.health, x.mana, x.name), reverse=True)
 final.extend(presort)
 SEPARATOR_LEN = max([len(str(item.name)) for item in final]) + 3
 
