@@ -1,7 +1,9 @@
-## Interface: 100200
+## Interface: 110002
 ## Title: DrinkMacroCreator
 ## Notes: Makes a macro to use your highest mana drink/food with mage food as a priority.
-## Author: Xain
-## Version: 1.3.2
+## Author: _xain
+## Version: 1.4.0
+## X-Source: https://github.com/DavidPHH/Drink-Macro-Creator
 
+DrinkPriorities.lua
 DrinkMacroCreator.lua
